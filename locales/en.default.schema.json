@@ -548,6 +548,76 @@
         "name": "Contact form"
       }
     },
+    "content-cards": {
+      "name": "Content cards",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        }
+      },
+      "blocks": {
+        "card": {
+          "name": "Card",
+          "settings": {
+            "color_background": {
+              "label": "Color Background",
+              "info": "Used for solid card background."
+            },
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "subtitle": {
+              "label": "Sub-title"
+            },
+            "button": {
+              "label": "Button",
+              "header": "Button"
+            },
+            "link": {
+              "label": "URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Content cards"
+      }
+    },
+    "posters": {
+      "name": "Posters",
+      "blocks": {
+        "card": {
+          "name": "Poster",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "color_title": {
+              "label": "Color title"
+            },
+            "button": {
+              "label": "Button",
+              "header": "Button"
+            },
+            "color_button": {
+              "label": "Color text button"
+            },
+            "link": {
+              "label": "URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Posters"
+      }
+    },
     "custom-liquid": {
       "name": "Custom Liquid",
       "settings": {
