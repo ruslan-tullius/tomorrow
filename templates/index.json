@@ -1,7 +1,107 @@
 {
   "sections": {
+    "16611994306c0ac3aa": {
+      "type": "content-cards",
+      "blocks": {
+        "c238de36-1c6d-4296-9dcb-f3e8602ebbe8": {
+          "type": "card",
+          "settings": {
+            "color_background": "#00966e",
+            "image": "shopify:\/\/shop_images\/Rectangle299.png",
+            "title": "Make a scene.",
+            "subtitle": "Everything you need for a great party, from decor to drinks and games.",
+            "button": "find your scene",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "3df9e17f-9df1-42b2-860d-658df8a80aaa": {
+          "type": "card",
+          "settings": {
+            "color_background": "#85abbd",
+            "image": "shopify:\/\/shop_images\/Rectangle289.png",
+            "title": "Make it extra.",
+            "subtitle": "Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.",
+            "button": "shop party supplies",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "cbba1663-e05f-4274-9366-be7057ef79b9": {
+          "type": "card",
+          "settings": {
+            "color_background": "#e3ff21",
+            "image": "shopify:\/\/shop_images\/Rectangle2891.png",
+            "title": "Make it joyful.",
+            "subtitle": "Create the arrangement of your dreams with DIY kits from Wild & Flowers.",
+            "button": "shop florals",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "4a3d77ce-df40-4ad9-a6d6-8542e335a796": {
+          "type": "card",
+          "settings": {
+            "color_background": "#bf91c4",
+            "image": "shopify:\/\/shop_images\/Rectangle2892.png",
+            "title": "Make it happen.",
+            "subtitle": "Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.",
+            "button": "browse vendors",
+            "link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "c238de36-1c6d-4296-9dcb-f3e8602ebbe8",
+        "3df9e17f-9df1-42b2-860d-658df8a80aaa",
+        "cbba1663-e05f-4274-9366-be7057ef79b9",
+        "4a3d77ce-df40-4ad9-a6d6-8542e335a796"
+      ],
+      "settings": {
+        "heading": "HAVING FUN 101"
+      }
+    },
+    "16612806393bfa3ae8": {
+      "type": "posters",
+      "blocks": {
+        "1661280639ead29467-0": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-1.png",
+            "title": "Housewarming Gifts for the Host",
+            "color_title": "#fff",
+            "button": "discover them all",
+            "color_button": "#fff",
+            "link": "shopify:\/\/products\/classic-barware"
+          }
+        },
+        "1661280639ead29467-1": {
+          "type": "poster",
+          "settings": {
+            "title": "Poster",
+            "color_title": "#fff",
+            "button": "shop the scene",
+            "color_button": "#fff",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661280639ead29467-0",
+        "1661280639ead29467-1"
+      ],
+      "settings": {
+      }
+    },
+    "1661280651970f04d0": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "HAVING FUN 101",
+        "products": [
+
+        ]
+      }
+    },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -50,6 +150,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -80,6 +181,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -107,6 +209,7 @@
     },
     "collage": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -145,6 +248,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -158,6 +262,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -208,49 +313,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "16611994306c0ac3aa": {
-      "type": "content-cards",
-      "blocks": {
-        "c238de36-1c6d-4296-9dcb-f3e8602ebbe8": {
-          "type": "card",
-          "settings": {
-          }
-        },
-        "3df9e17f-9df1-42b2-860d-658df8a80aaa": {
-          "type": "card",
-          "settings": {
-          }
-        },
-        "cbba1663-e05f-4274-9366-be7057ef79b9": {
-          "type": "card",
-          "settings": {
-          }
-        },
-        "4a3d77ce-df40-4ad9-a6d6-8542e335a796": {
-          "type": "card",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "c238de36-1c6d-4296-9dcb-f3e8602ebbe8",
-        "3df9e17f-9df1-42b2-860d-658df8a80aaa",
-        "cbba1663-e05f-4274-9366-be7057ef79b9",
-        "4a3d77ce-df40-4ad9-a6d6-8542e335a796"
-      ],
-      "settings": {
-        "heading": "HAVING FUN 101"
-      }
     }
   },
   "order": [
+    "16611994306c0ac3aa",
+    "16612806393bfa3ae8",
+    "1661280651970f04d0",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "16611994306c0ac3aa"
+    "multicolumn"
   ]
 }

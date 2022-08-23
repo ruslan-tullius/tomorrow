@@ -589,7 +589,7 @@
     "posters": {
       "name": "Posters",
       "blocks": {
-        "card": {
+        "poster": {
           "name": "Poster",
           "settings": {
             "image": {
@@ -598,9 +598,15 @@
             "title": {
               "label": "Title"
             },
+            "color_title": {
+              "label": "Color title"
+            },
             "button": {
               "label": "Button",
               "header": "Button"
+            },
+            "color_button": {
+              "label": "Color button"
             },
             "link": {
               "label": "URL"
