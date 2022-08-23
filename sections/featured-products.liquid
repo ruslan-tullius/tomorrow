@@ -1,2 +1,55 @@
-{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-products.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'FeaturedProducts.min.js' | asset_url }}" defer="defer"></script>
+
+<script type="application/json" data-featured-products-settings="{{ section.id }}">
+  {
+    "products": [
+      {%- for product in section.settings.products -%}
+        {
+          "title": {{ product.title | json }},
+          "price": {{ product.price | json }},
+          "featured_image": {{ product.featured_image | json }},
+          "handle": {{ product.handle | json }},
+          "id": {{ product.id | json }}
+        }
+        {%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+
+<div class="featured-products">
+  <div class="page-width">
+    <h2 class="heading">PARTY A LA CARTE</h2>
+    <div data-featured-products data-id="{{ section.id }}"></div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Featured products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "HAVING FUN 101",
+      "label": "t:sections.content-cards.settings.heading.label"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "t:sections.content-cards.blocks.card.name"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured products"
+    }
+  ]
+}
+{% endschema %}
 

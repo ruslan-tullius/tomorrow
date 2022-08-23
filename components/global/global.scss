@@ -1,0 +1,67 @@
+@import '../mixins/_fonts.scss';
+@import '../../node_modules/swiper/swiper.scss';
+
+@include font-face('GT Super Text Book', GT-Super-Text-Book, null, normal, otf woff2 woff ttf);
+@include font-face('GT Super Text Book', GT-Super-Text-Book-Italic, null, italic, otf woff2 woff ttf);
+
+@include font-face('Platform', Platform-Regular, null, normal, otf woff2 woff);
+@include font-face('Platform', Platform-Medium, 500, normal, otf woff2 woff);
+
+@include font-face('GT Super Display', GT-Super-Display-Light, null, normal, otf woff2 woff ttf);
+@include font-face('GT Super Display', GT-Super-Display-Light-Italic, null, italic, otf woff2 woff ttf);
+@include font-face('GT Super Display', GT-Super-Display-Medium, 500, normal, otf woff2 woff ttf);
+@include font-face('GT Super Display', GT-Super-Display-Medium-Italic, 500, italic, otf woff2 woff ttf);
+
+
+.item {
+  width: calc(100%/3);
+  padding: 0 0.1rem;
+
+  &__image {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__information {
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    color: #000;
+    font-family: var(--font-heading);
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &__price {
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    text-align: right;
+    letter-spacing: 0.25em;
+    font-family: var(--font-link);
+  }
+}
+
+h2.heading {
+  font-size: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  color: rgb(var(--color-foreground));
+  margin-top: 0;
+  margin-bottom: 6rem;
+  font-family: var(--font-heading);
+}

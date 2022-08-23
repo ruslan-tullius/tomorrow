@@ -598,15 +598,9 @@
             "title": {
               "label": "Title"
             },
-            "color_title": {
-              "label": "Color title"
-            },
             "button": {
               "label": "Button",
               "header": "Button"
-            },
-            "color_button": {
-              "label": "Color text button"
             },
             "link": {
               "label": "URL"

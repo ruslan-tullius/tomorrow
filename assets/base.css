@@ -2729,8 +2729,7 @@ details-disclosure > details {
 }
 
 .gradient {
-  background: rgb(var(--color-background));
-  background: var(--gradient-background);
+  background-color: rgb(var(--color-base-accent-2));
   background-attachment: fixed;
 }
 

@@ -1,0 +1,17 @@
+.featured-products {
+  padding: 3.9rem 0;
+
+  h2 {
+    font-size: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    color: rgb(var(--color-foreground));
+    margin-top: 0;
+    margin-bottom: 6rem;
+    font-family: var(--font-heading);
+  }
+
+  &__wrap {
+    display: flex;
+  }
+}
