@@ -612,6 +612,20 @@
         "name": "Posters"
       }
     },
+    "featured-products": {
+      "name": "Featured products",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "products": {
+          "label": "Products"
+        }
+      },
+      "presets": {
+        "name": "Posters"
+      }
+    },
     "custom-liquid": {
       "name": "Custom Liquid",
       "settings": {

@@ -4,13 +4,17 @@ const sass = require('gulp-sass')(require('sass'));
 const webpack = require('webpack-stream');
 const path = require('path');
 const foreach = require('gulp-foreach');
-const gulpIgnore = require('gulp-ignore');
-const condition = './components/mixins/*';
 const mode = require('gulp-mode')();
 const babel = require('gulp-babel');
 const jsx = [
   './components/featured-products/FeaturedProducts.jsx'
-]
+];
+
+const toUnderScore = (key) => {
+  const result = key.replace( /([A-Z])/g, " $1" );
+  return result.split(' ').join('_').toLowerCase().substr(1);
+};
+
 gulp.task('sass', function() {
   return gulp.src(['components/**/*.scss', 'components/mixins/*.scss'])
     .pipe(sass({ outputStyle: 'compressed' }))
@@ -37,7 +41,7 @@ gulp.task('js', function() {
 gulp.task('jsx', function() {
   return gulp.src('./components/**/*.jsx')
     .pipe(foreach(function(stream, file){
-      const filename = path.basename(file.path, '.jsx');
+      const filename = toUnderScore(path.basename(file.path, '.jsx'));
       return stream
         .pipe(
           babel({

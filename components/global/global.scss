@@ -1,4 +1,5 @@
 @import '../mixins/_fonts.scss';
+@import '../mixins/_breackpoints.scss';
 @import '../../node_modules/swiper/swiper.scss';
 
 @include font-face('GT Super Text Book', GT-Super-Text-Book, null, normal, otf woff2 woff ttf);
@@ -12,10 +13,12 @@
 @include font-face('GT Super Display', GT-Super-Display-Medium, 500, normal, otf woff2 woff ttf);
 @include font-face('GT Super Display', GT-Super-Display-Medium-Italic, 500, italic, otf woff2 woff ttf);
 
+.swiper-slide {
+  height: auto;
+}
 
 .item {
   width: calc(100%/3);
-  padding: 0 0.1rem;
 
   &__image {
     img {
@@ -57,11 +60,17 @@
 }
 
 h2.heading {
-  font-size: 8rem;
-  line-height: 8rem;
+  font-size: 4rem;
+  line-height: 4rem;
   text-align: center;
   color: rgb(var(--color-foreground));
   margin-top: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   font-family: var(--font-heading);
+
+  @include from-md {
+    font-size: 8rem;
+    line-height: 8rem;
+    margin-bottom: 6rem;
+  }
 }

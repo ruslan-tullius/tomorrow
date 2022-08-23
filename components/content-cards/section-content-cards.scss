@@ -1,8 +1,15 @@
+@import '../mixins/_breackpoints.scss';
+
 .content-cards {
-  padding: 3.9rem 0;
+  padding: 3rem 0;
+
+  @include from-md {
+    padding: 3.9rem 0;
+  }
 
   &__box {
     padding: 1rem;
+    height: 100%;
 
     img {
       width: 100%;
@@ -41,5 +48,24 @@
     text-transform: uppercase;
     display: block;
     font-family: var(--font-link);
+  }
+
+  &__swiper {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      width: 3rem;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: linear-gradient(270deg, #F4EDE5 0%, rgba(244, 237, 229, 0) 100%);
+
+      @include from-md {
+        display: none;
+      }
+    }
   }
 }

@@ -3,22 +3,26 @@ import Swiper from 'swiper/bundle';
 class SectionContentCards extends HTMLElement {
   constructor() {
     super();
-    this.initSlider()
+    this._initSlider()
   }
-  initSlider() {
+
+  /**
+   * Swiper initialization
+   * @private
+   */
+  _initSlider() {
     this.swiper = new Swiper(this.querySelector('.content-cards__swiper'), {
       slidesPerView: 4,
-      navigation: {
-        nextEl: '.swiper-button-next-unique',
-        prevEl: '.swiper-button-prev-unique',
-      },
       spaceBetween: 10,
       loop: true,
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1.3,
         },
         768: {
+          slidesPerView: 2.6,
+        },
+        992: {
           slidesPerView: 4,
         }
       }

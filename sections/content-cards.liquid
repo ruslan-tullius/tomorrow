@@ -9,7 +9,7 @@
       {%- endif -%}
       {%- if section.blocks.size > 0 -%}
         <div class="content-cards__swiper swiper">
-        <div class="content-cards__wrap swiper-wrapper">
+          <div class="content-cards__wrap swiper-wrapper">
           {%- for block in section.blocks -%}
             <div class="swiper-slide">
               <div class="content-cards__box" {%- if block.settings.color_background != blank -%}style="background-color: {{ block.settings.color_background }}"{%- endif -%}>
