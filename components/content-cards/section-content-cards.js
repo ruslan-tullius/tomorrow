@@ -14,13 +14,21 @@ class SectionContentCards extends HTMLElement {
     this.swiper = new Swiper(this.querySelector('.content-cards__swiper'), {
       slidesPerView: 4,
       spaceBetween: 10,
-      loop: true,
+      loop: false,
       breakpoints: {
         320: {
           slidesPerView: 1.3,
+          navigation: {
+            nextEl: '.button-next-cards',
+            prevEl: '.button-prev-cards',
+          }
         },
         768: {
           slidesPerView: 2.6,
+          navigation: {
+            nextEl: '.button-next-cards',
+            prevEl: '.button-prev-cards',
+          }
         },
         992: {
           slidesPerView: 4,

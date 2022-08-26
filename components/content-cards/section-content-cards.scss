@@ -91,4 +91,25 @@
       }
     }
   }
+
+  .button-prev-cards,
+  .button-next-cards {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    right: 1rem;
+    left: auto;
+    margin-top: -3rem;
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+
+  .button-prev-cards {
+    left: 1rem;
+    right: auto;
+    transform: rotate(180deg);
+  }
 }
+

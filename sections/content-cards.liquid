@@ -10,48 +10,50 @@
       {%- if section.blocks.size > 0 -%}
         <div class="content-cards__swiper swiper">
           <div class="content-cards__wrap swiper-wrapper">
-          {%- for block in section.blocks -%}
-            <div class="swiper-slide">
-              <div class="content-cards__box" {%- if block.settings.color_background != blank -%}style="background-color: {{ block.settings.color_background }}"{%- endif -%}>
-                {%- if block.settings.image != blank -%}
-                  <img
-                      class="content-cards__image"
-                      srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
-                              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-                              {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
-                              {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-                              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-                      src="{{ block.settings.image | image_url: width: 550 }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                              (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
-                              calc(100vw - 30px)"
-                      alt="{{ block.settings.image.alt }}"
-                      height="{{ block.settings.image.height }}"
-                      width="{{ block.settings.image.width }}"
-                      loading="lazy"
-                  >
-                {%- else -%}
-                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                {%- endif -%}
-                {%- if block.settings.title != blank -%}
-                  <div class="content-cards__title">
-                    {{ block.settings.title | escape }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.subtitle != blank -%}
-                  <div class="content-cards__subtitle">
-                    {{ block.settings.subtitle | escape }}
-                  </div>
-                {%- endif -%}
-                {%- if block.settings.link != blank and block.settings.button != blank -%}
-                  <a href="{{ block.settings.link }}" class="content-cards__link">
-                    {{ block.settings.button | escape }}
-                  </a>
-                {%- endif -%}
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide">
+                <div class="content-cards__box" {%- if block.settings.color_background != blank -%}style="background-color: {{ block.settings.color_background }}"{%- endif -%}>
+                  {%- if block.settings.image != blank -%}
+                    <img
+                        class="content-cards__image"
+                        srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+                                {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                                {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+                                {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                                {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                        src="{{ block.settings.image | image_url: width: 550 }}"
+                        sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                                (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                                calc(100vw - 30px)"
+                        alt="{{ block.settings.image.alt }}"
+                        height="{{ block.settings.image.height }}"
+                        width="{{ block.settings.image.width }}"
+                        loading="lazy"
+                    >
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <div class="content-cards__title">
+                      {{ block.settings.title | escape }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.subtitle != blank -%}
+                    <div class="content-cards__subtitle">
+                      {{ block.settings.subtitle | escape }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.link != blank and block.settings.button != blank -%}
+                    <a href="{{ block.settings.link }}" class="content-cards__link">
+                      {{ block.settings.button | escape }}
+                    </a>
+                  {%- endif -%}
+                </div>
               </div>
-            </div>
-          {%- endfor  -%}
-        </div>
+            {%- endfor  -%}
+          </div>
+          <div class="button-next-cards">{% render 'icon-cards-arrow' %}</div>
+          <div class="button-prev-cards">{% render 'icon-cards-arrow' %}</div>
         </div>
       {%- endif -%}
     </div>
