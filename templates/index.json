@@ -42,7 +42,7 @@
             "color_background": "#bf91c4",
             "image": "shopify:\/\/shop_images\/Rectangle2892.png",
             "title": "Make it happen.",
-            "subtitle": "Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.",
+            "subtitle": "Need a bartender, caterer, or DJ? Just add to cart. It’s that easy.",
             "button": "browse vendors",
             "link": "shopify:\/\/collections\/all"
           }
@@ -66,20 +66,21 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-1.png",
             "title": "Housewarming Gifts for the Host",
-            "color_title": "#fff",
+            "color_title": "#ffffff",
             "button": "discover them all",
-            "color_button": "#fff",
+            "color_button": "#ffffff",
             "link": "shopify:\/\/products\/classic-barware"
           }
         },
         "1661280639ead29467-1": {
           "type": "poster",
           "settings": {
-            "title": "Poster",
-            "color_title": "#fff",
+            "image": "shopify:\/\/shop_images\/Rectangle_324_2.png",
+            "title": "The Limited-Edition Holiday Scene",
+            "color_title": "#ffffff",
             "button": "shop the scene",
-            "color_button": "#fff",
-            "link": ""
+            "color_button": "#ffffff",
+            "link": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -93,9 +94,12 @@
     "1661280651970f04d0": {
       "type": "featured-products",
       "settings": {
-        "heading": "HAVING FUN 101",
+        "heading": "PARTY A LA CARTE",
         "products": [
-
+          "classic-barware",
+          "colored-wine-glasses",
+          "figlia-aperitivo",
+          "scenes"
         ]
       }
     },

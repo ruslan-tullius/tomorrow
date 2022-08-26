@@ -58,7 +58,7 @@ const FeaturedProducts = ({id}) => {
               <h3>
                 <a href={product.handle}>{product.title}</a>
               </h3>
-              <div className="item__price">{formatMoney(product.price, window.moneyFormat)}</div>
+              <div className="item__price">{formatMoney(product.price, window.ShopMoneyFormat)}</div>
             </div>
           </div>
         ))}

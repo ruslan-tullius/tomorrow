@@ -29,11 +29,18 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
+    margin-left: -1.1rem;
+    margin-right: 0.5rem;
   }
 
   .header__heading-logo {
     max-width: {{ section.settings.logo_width }}px;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header__heading-logo {
+        max-width: {{ section.settings.logo_width_mobile }}px;
+    }
   }
 
   @media screen and (min-width: 990px) {
@@ -533,8 +540,9 @@
                     <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                     <input type="hidden" name="options[prefix]" value="last">
                     <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                        <use href="#icon-search">
+                      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8.5" cy="8.5" r="7.5" stroke="black"/>
+                        <path d="M13.3346 14.3345L19.3346 20.3345" stroke="black"/>
                       </svg>
                     </button>
                   </div>
@@ -579,7 +587,7 @@
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--margin header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
@@ -784,6 +792,16 @@
       "default": 100,
       "unit": "t:sections.header.settings.logo_width.unit",
       "label": "t:sections.header.settings.logo_width.label"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 50,
+      "max": 250,
+      "step": 5,
+      "default": 105,
+      "unit": "t:sections.header.settings.logo_width_mobile.unit",
+      "label": "t:sections.header.settings.logo_width_mobile.label"
     },
     {
       "type": "select",

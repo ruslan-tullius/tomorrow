@@ -624,8 +624,11 @@
         "heading": {
           "label": "Heading"
         },
-        "products": {
-          "label": "Products"
+        "collection": {
+          "label": "Collection"
+        },
+        "button_label": {
+          "label": "Button label"
         }
       },
       "presets": {
@@ -973,7 +976,11 @@
         },
         "logo_width": {
           "unit": "px",
-          "label": "Custom logo width"
+          "label": "Custom logo width for Desktop"
+        },
+        "logo_width_mobile": {
+          "unit": "px",
+          "label": "Custom logo width for Mobile"
         },
         "logo_position": {
           "label": "Desktop logo position",

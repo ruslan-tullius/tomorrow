@@ -1,10 +1,12 @@
 {{ 'section-featured-products.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'featured_products.min.js' | asset_url }}" defer="defer"></script>
 
+{% assign collection = collections[section.settings.collection] %}
+
 <script type="application/json" data-featured-products-settings="{{ section.id }}">
   {
     "products": [
-      {%- for product in section.settings.products -%}
+      {%- for product in collection.products -%}
         {
           "title": {{ product.title | json }},
           "price": {{ product.price | json }},
@@ -24,7 +26,16 @@
     {%- if section.settings.heading != blank -%}
       <h2 class="heading">{{ section.settings.heading | escape }}</h2>
     {%- endif -%}
-    <div data-featured-products data-id="{{ section.id }}"></div>
+
+    {% if section.settings.collection != blank %}
+      <div data-featured-products data-id="{{ section.id }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank and collection.url != blank -%}
+      <div class="featured-products__button">
+        <a href="{{ collection.url }}">{{ section.settings.button_label | escape }}</a>
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -41,9 +52,15 @@
       "default": "HAVING FUN 101"
     },
     {
-      "type": "product_list",
-      "id": "products",
-      "label": "t:sections.featured-products.settings.products.label"
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-products.settings.collection.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.featured-products.settings.button_label.label",
+      "default": "Shop all"
     }
   ],
   "presets": [

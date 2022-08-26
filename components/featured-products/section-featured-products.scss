@@ -49,6 +49,27 @@
     }
   }
 
+  &__button {
+    margin-top: 4rem;
+    text-align: center;
+
+    a {
+      font-family: var(--font-link);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgb(var(--color-foreground));
+
+      @include from-md {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+
   .item {
     display: flex;
     flex-direction: column;
@@ -70,6 +91,7 @@
   top: 50%;
   display: none;
   cursor: pointer;
+  margin-top: -1.6rem;
 
   @include from-md {
     display: block;

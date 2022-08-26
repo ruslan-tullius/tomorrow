@@ -3,6 +3,14 @@
 .content-cards {
   padding: 3rem 0;
 
+  .heading {
+    margin-top: 2.8rem;
+
+    @include from-md {
+      margin-top: 3.8rem;
+    }
+  }
+
   @include from-md {
     padding: 3.9rem 0;
   }
@@ -14,18 +22,27 @@
     img {
       width: 100%;
       height: auto;
-      padding-bottom: 3rem;
+      padding-bottom: .9rem;
+
+      @include from-md {
+        padding-bottom: 2.1rem;
+      }
     }
   }
 
   &__title {
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
     text-align: center;
     font-weight: 400;
     color: rgb(var(--color-base-text));
     padding-bottom: 1rem;
     font-family: var(--font-heading);
+
+    @include from-md {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
   }
 
   &__subtitle {
@@ -35,7 +52,13 @@
     font-weight: 400;
     color: rgb(var(--color-base-text));
     font-family: var(--font-heading);
-    padding: 0 1.7rem 1.7rem 1.7rem;
+    padding: 0 0 1rem 0;
+    letter-spacing: .6rem;
+
+    @include from-md {
+      letter-spacing: normal;
+      padding: 0 1.7rem 1.7rem 1.7rem;
+    }
   }
 
   &__link {
@@ -43,8 +66,8 @@
     line-height: 1.2rem;
     text-align: center;
     color: rgb(var(--color-link));
-    margin-bottom: 5rem;
-    letter-spacing: 0.25rem;
+    margin-bottom: 5.2rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     display: block;
     font-family: var(--font-link);
